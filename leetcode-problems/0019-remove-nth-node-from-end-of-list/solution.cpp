@@ -11,60 +11,20 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-    //     ListNode* prev = nullptr;
-    //     ListNode* temp = head;
-    //     while(temp){
-    //         ListNode* front = temp->next;
-    //         temp->next = prev;
-    //         prev = temp;
-    //         temp = front;
-    //     }
-    //     ListNode* dummy = new ListNode(0);
-    //     dummy->next = prev;
-    //     ListNode* current = dummy;   // ✅ start from dummy
+        ListNode dummy(0, head);
+        ListNode * left = &dummy;
+        ListNode * right = &dummy;
 
-    //     int count = 0;
-    //     while (current->next) {
-    //         if (count == n - 1) {
-    //         ListNode* p = current->next;
-    //         current->next = current->next->next;
-    //         delete p;
-    //         break;
-    //         }
-    //         count++;
-    //         current = current->next;
-    //     }
-    //     ListNode* newprev = nullptr;
-    //     ListNode* newptr=dummy->next;
-    //     while(newptr){
-    //         ListNode* newfront = newptr->next;
-    //         newptr->next = newprev;
-    //         newprev = newptr;
-    //         newptr = newfront;
-        
-    //     }
-    //     return newprev;
-
-    // }
-    ListNode* dummy = new ListNode(0);
-    dummy->next = head;
-
-
-    ListNode* front = dummy;
-    ListNode* back = dummy;
-    for(int i = 0; i<=n; i++){
-        front = front->next;
-    }
-    while(front!= nullptr){
-        front = front->next;
-        back = back->next;
-    }
-    ListNode* nodetodelete = back->next;
-    back->next = back->next->next;
-
-    delete nodetodelete;
-    ListNode* newhead = dummy->next;
-    delete dummy;
-    return newhead;
+        for(int i= 0; i<n; i++){
+            right = right->next;
+        }
+        while(right->next != nullptr){
+            left = left->next;
+            right = right->next;
+        }
+        ListNode * Node_delete = left->next;
+        left->next = left->next->next;
+        delete Node_delete;
+        return dummy.next;
     }
 };
