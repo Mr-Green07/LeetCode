@@ -9,7 +9,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync
+      - name: Sync (attempt 1)
+        id: sync_attempt_1
+        continue-on-error: true
+        uses: joshcai/leetcode-sync@v1.7
+        with:
+          github-token: ${{ github.token }}
+          leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+          leetcode-session: ${{ secrets.LEETCODE_SESSION }}
+          destination-folder: leetcode-problems
+
+      - name: Sync (retry on failure)
+        if: steps.sync_attempt_1.outcome == 'failure'
         uses: joshcai/leetcode-sync@v1.7
         with:
           github-token: ${{ github.token }}
