@@ -4,18 +4,18 @@ __pycache__/
 *.egg-info/
 .venv/
 venv/
-.env
+# .env
 
 # Runtime artefacts
-models/*.pt
-models/*.pth
-models/*.json
+# models/*.pt
+# models/*.pth
+# models/*.json
 # The metrics sidecars are tiny and are the provenance trail for the numbers
 # reported in TESTING.md - keep them even though the checkpoints are ignored.
 !models/*.metrics.json
 data/
-reports/
-storage/
+# reports/
+# storage/
 !data/.gitkeep
 !reports/.gitkeep
 !storage/.gitkeep

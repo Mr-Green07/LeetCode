@@ -1,0 +1,113 @@
+
+===== ECG =====
+2026-10-28 12:20:47,421 | INFO     | train_ecg                    | Preparing the ECG training set (synthetic)...
+2026-10-28 12:20:48,343 | INFO     | train_ecg                    | prepared 50/700 samples
+2026-10-28 12:20:48,651 | INFO     | train_ecg                    | prepared 100/700 samples
+2026-10-28 12:20:48,951 | INFO     | train_ecg                    | prepared 150/700 samples
+2026-10-28 12:20:49,263 | INFO     | train_ecg                    | prepared 200/700 samples
+2026-10-28 12:20:49,594 | INFO     | train_ecg                    | prepared 250/700 samples
+2026-10-28 12:20:49,892 | INFO     | train_ecg                    | prepared 300/700 samples
+2026-10-28 12:20:50,204 | INFO     | train_ecg                    | prepared 350/700 samples
+2026-10-28 12:20:50,517 | INFO     | train_ecg                    | prepared 400/700 samples
+2026-10-28 12:20:50,873 | INFO     | train_ecg                    | prepared 450/700 samples
+2026-10-28 12:20:51,204 | INFO     | train_ecg                    | prepared 500/700 samples
+2026-10-28 12:20:51,532 | INFO     | train_ecg                    | prepared 550/700 samples
+2026-10-28 12:20:51,855 | INFO     | train_ecg                    | prepared 600/700 samples
+2026-10-28 12:20:52,178 | INFO     | train_ecg                    | prepared 650/700 samples
+2026-10-28 12:20:52,474 | INFO     | train_ecg                    | prepared 700/700 samples
+2026-10-28 12:20:52,481 | INFO     | train_ecg                    | Training set: 700 samples, signal (1, 2500), features 18
+2026-10-28 12:21:31,449 | INFO     | app.ml.training              | epoch  1/25  loss=0.9299  val_acc=0.400  val_f1=0.274  auc=0.855  (37.4s)
+2026-10-28 12:22:08,926 | INFO     | app.ml.training              | epoch  2/25  loss=0.3360  val_acc=0.414  val_f1=0.319  auc=0.895  (37.5s)
+2026-10-28 12:22:48,259 | INFO     | app.ml.training              | epoch  3/25  loss=0.2621  val_acc=0.993  val_f1=0.993  auc=1.000  (39.3s)
+2026-10-28 12:23:27,663 | INFO     | app.ml.training              | epoch  4/25  loss=0.2571  val_acc=0.993  val_f1=0.993  auc=1.000  (39.4s)
+2026-10-28 12:24:14,894 | INFO     | app.ml.training              | epoch  5/25  loss=0.2507  val_acc=0.993  val_f1=0.993  auc=1.000  (47.2s)
+2026-10-28 12:25:27,419 | INFO     | app.ml.training              | epoch  6/25  loss=0.2532  val_acc=0.993  val_f1=0.993  auc=1.000  (72.5s)
+2026-10-28 12:26:13,108 | INFO     | app.ml.training              | epoch  7/25  loss=0.2469  val_acc=0.993  val_f1=0.993  auc=1.000  (45.7s)
+2026-10-28 12:26:58,915 | INFO     | app.ml.training              | epoch  8/25  loss=0.2536  val_acc=0.993  val_f1=0.993  auc=1.000  (45.8s)
+2026-10-28 12:27:41,007 | INFO     | app.ml.training              | epoch  9/25  loss=0.2442  val_acc=0.993  val_f1=0.993  auc=1.000  (42.1s)
+2026-10-28 12:28:24,676 | INFO     | app.ml.training              | epoch 10/25  loss=0.2483  val_acc=0.993  val_f1=0.993  auc=1.000  (43.7s)
+2026-10-28 12:29:04,535 | INFO     | app.ml.training              | epoch 11/25  loss=0.2449  val_acc=0.993  val_f1=0.993  auc=1.000  (39.8s)
+2026-10-28 12:29:44,104 | INFO     | app.ml.training              | epoch 12/25  loss=0.2456  val_acc=0.993  val_f1=0.993  auc=1.000  (39.6s)
+2026-10-28 12:30:22,236 | INFO     | app.ml.training              | epoch 13/25  loss=0.2427  val_acc=0.993  val_f1=0.993  auc=1.000  (38.1s)
+2026-10-28 12:31:00,894 | INFO     | app.ml.training              | epoch 14/25  loss=0.2477  val_acc=0.993  val_f1=0.993  auc=1.000  (38.7s)
+2026-10-28 12:31:42,404 | INFO     | app.ml.training              | epoch 15/25  loss=0.2448  val_acc=0.993  val_f1=0.993  auc=1.000  (41.5s)
+2026-10-28 12:32:38,021 | INFO     | app.ml.training              | epoch 16/25  loss=0.2448  val_acc=0.993  val_f1=0.993  auc=1.000  (55.6s)
+2026-10-28 12:33:21,539 | INFO     | app.ml.training              | epoch 17/25  loss=0.2423  val_acc=0.993  val_f1=0.993  auc=1.000  (43.5s)
+2026-10-28 12:34:06,795 | INFO     | app.ml.training              | epoch 18/25  loss=0.2474  val_acc=0.993  val_f1=0.993  auc=1.000  (45.3s)
+2026-10-28 12:34:49,646 | INFO     | app.ml.training              | epoch 19/25  loss=0.2457  val_acc=0.993  val_f1=0.993  auc=1.000  (42.8s)
+2026-10-28 12:34:49,646 | INFO     | app.ml.training              | Early stopping at epoch 19
+2026-10-28 12:34:49,724 | INFO     | train_ecg                    | Best validation metrics: {'accuracy': 0.9929, 'f1_0': 0.9825, 'f1_1': 0.9818, 'f1_2': 1.0, 'f1_3': 1.0, 'f1_4': 1.0, 'f1_macro': 0.9929, 'auc': 1.0, 'loss': 0.0438, 'best_epoch': 13.0}
+2026-10-28 12:34:49,874 | INFO     | app.ml.training              | Checkpoint written to D:\minimaxc\meddiag\models\ecg_model.pt
+===== ECG rc=0 in 14.1 min =====
+
+===== EEG =====
+2026-10-28 12:34:54,611 | INFO     | train_eeg                    | Preparing the EEG training set (synthetic)...
+2026-10-28 12:34:54,986 | INFO     | train_eeg                    | prepared 50/560 samples
+2026-10-28 12:34:55,153 | INFO     | train_eeg                    | prepared 100/560 samples
+2026-10-28 12:34:55,297 | INFO     | train_eeg                    | prepared 150/560 samples
+2026-10-28 12:34:55,496 | INFO     | train_eeg                    | prepared 200/560 samples
+2026-10-28 12:34:55,691 | INFO     | train_eeg                    | prepared 250/560 samples
+2026-10-28 12:34:55,877 | INFO     | train_eeg                    | prepared 300/560 samples
+2026-10-28 12:34:56,073 | INFO     | train_eeg                    | prepared 350/560 samples
+2026-10-28 12:34:56,264 | INFO     | train_eeg                    | prepared 400/560 samples
+2026-10-28 12:34:56,435 | INFO     | train_eeg                    | prepared 450/560 samples
+2026-10-28 12:34:56,606 | INFO     | train_eeg                    | prepared 500/560 samples
+2026-10-28 12:34:56,739 | INFO     | train_eeg                    | prepared 550/560 samples
+2026-10-28 12:34:56,769 | INFO     | train_eeg                    | Training set: 560 samples, signal (1, 1, 2560), features 16
+2026-10-28 12:34:59,570 | INFO     | app.ml.training              | epoch  1/25  loss=0.8417  val_acc=0.732  val_f1=0.666  auc=1.000  (0.8s)
+2026-10-28 12:35:00,291 | INFO     | app.ml.training              | epoch  2/25  loss=0.3307  val_acc=1.000  val_f1=1.000  auc=1.000  (0.7s)
+2026-10-28 12:35:00,989 | INFO     | app.ml.training              | epoch  3/25  loss=0.2283  val_acc=1.000  val_f1=1.000  auc=1.000  (0.7s)
+2026-10-28 12:35:01,704 | INFO     | app.ml.training              | epoch  4/25  loss=0.2226  val_acc=1.000  val_f1=1.000  auc=1.000  (0.7s)
+2026-10-28 12:35:02,449 | INFO     | app.ml.training              | epoch  5/25  loss=0.2212  val_acc=1.000  val_f1=1.000  auc=1.000  (0.7s)
+2026-10-28 12:35:03,179 | INFO     | app.ml.training              | epoch  6/25  loss=0.2268  val_acc=1.000  val_f1=1.000  auc=1.000  (0.7s)
+2026-10-28 12:35:03,976 | INFO     | app.ml.training              | epoch  7/25  loss=0.2208  val_acc=1.000  val_f1=1.000  auc=1.000  (0.8s)
+2026-10-28 12:35:04,806 | INFO     | app.ml.training              | epoch  8/25  loss=0.2182  val_acc=1.000  val_f1=1.000  auc=1.000  (0.8s)
+2026-10-28 12:35:05,527 | INFO     | app.ml.training              | epoch  9/25  loss=0.2238  val_acc=1.000  val_f1=1.000  auc=1.000  (0.7s)
+2026-10-28 12:35:06,247 | INFO     | app.ml.training              | epoch 10/25  loss=0.2199  val_acc=1.000  val_f1=1.000  auc=1.000  (0.7s)
+2026-10-28 12:35:06,974 | INFO     | app.ml.training              | epoch 11/25  loss=0.2238  val_acc=1.000  val_f1=1.000  auc=1.000  (0.7s)
+2026-10-28 12:35:07,707 | INFO     | app.ml.training              | epoch 12/25  loss=0.2180  val_acc=1.000  val_f1=1.000  auc=1.000  (0.7s)
+2026-10-28 12:35:07,707 | INFO     | app.ml.training              | Early stopping at epoch 12
+2026-10-28 12:35:07,709 | INFO     | train_eeg                    | Best validation metrics: {'accuracy': 1.0, 'f1_0': 1.0, 'f1_1': 1.0, 'f1_2': 1.0, 'f1_3': 1.0, 'f1_macro': 1.0, 'auc': 1.0, 'loss': 0.0243, 'best_epoch': 6.0}
+2026-10-28 12:35:07,715 | INFO     | app.ml.training              | Checkpoint written to D:\minimaxc\meddiag\models\eeg_model.pt
+===== EEG rc=0 in 0.3 min =====
+
+===== XRAY =====
+2026-10-28 12:35:10,178 | INFO     | train_xray                   | Preparing the X-ray training set (synthetic)...
+2026-10-28 12:35:27,795 | INFO     | train_xray                   | prepared 50/720 samples
+2026-10-28 12:35:28,201 | INFO     | train_xray                   | prepared 100/720 samples
+2026-10-28 12:35:28,581 | INFO     | train_xray                   | prepared 150/720 samples
+2026-10-28 12:35:28,942 | INFO     | train_xray                   | prepared 200/720 samples
+2026-10-28 12:35:29,281 | INFO     | train_xray                   | prepared 250/720 samples
+2026-10-28 12:35:29,637 | INFO     | train_xray                   | prepared 300/720 samples
+2026-10-28 12:35:30,108 | INFO     | train_xray                   | prepared 350/720 samples
+2026-10-28 12:35:30,509 | INFO     | train_xray                   | prepared 400/720 samples
+2026-10-28 12:35:30,835 | INFO     | train_xray                   | prepared 450/720 samples
+2026-10-28 12:35:31,214 | INFO     | train_xray                   | prepared 500/720 samples
+2026-10-28 12:35:31,632 | INFO     | train_xray                   | prepared 550/720 samples
+2026-10-28 12:35:32,066 | INFO     | train_xray                   | prepared 600/720 samples
+2026-10-28 12:35:32,492 | INFO     | train_xray                   | prepared 650/720 samples
+2026-10-28 12:35:32,899 | INFO     | train_xray                   | prepared 700/720 samples
+2026-10-28 12:35:33,122 | INFO     | train_xray                   | Training set: 720 samples, images (1, 224, 224), features 11
+2026-10-28 12:35:58,598 | INFO     | app.ml.training              | epoch  1/20  loss=1.0181  val_acc=0.333  val_f1=0.222  auc=0.974  (24.0s)
+2026-10-28 12:36:24,041 | INFO     | app.ml.training              | epoch  2/20  loss=0.4566  val_acc=0.333  val_f1=0.222  auc=0.994  (25.4s)
+2026-10-28 12:36:51,488 | INFO     | app.ml.training              | epoch  3/20  loss=0.3380  val_acc=1.000  val_f1=1.000  auc=1.000  (27.4s)
+2026-10-28 12:37:18,052 | INFO     | app.ml.training              | epoch  4/20  loss=0.2929  val_acc=1.000  val_f1=1.000  auc=1.000  (26.6s)
+2026-10-28 12:37:44,254 | INFO     | app.ml.training              | epoch  5/20  loss=0.2869  val_acc=1.000  val_f1=1.000  auc=1.000  (26.2s)
+2026-10-28 12:38:08,310 | INFO     | app.ml.training              | epoch  6/20  loss=0.2755  val_acc=0.868  val_f1=0.844  auc=1.000  (24.1s)
+2026-10-28 12:38:31,491 | INFO     | app.ml.training              | epoch  7/20  loss=0.2741  val_acc=1.000  val_f1=1.000  auc=1.000  (23.2s)
+2026-10-28 12:38:54,830 | INFO     | app.ml.training              | epoch  8/20  loss=0.2695  val_acc=1.000  val_f1=1.000  auc=1.000  (23.3s)
+2026-10-28 12:39:24,527 | INFO     | app.ml.training              | epoch  9/20  loss=0.2740  val_acc=1.000  val_f1=1.000  auc=1.000  (29.7s)
+2026-10-28 12:39:52,308 | INFO     | app.ml.training              | epoch 10/20  loss=0.2703  val_acc=1.000  val_f1=1.000  auc=1.000  (27.8s)
+2026-10-28 12:40:15,967 | INFO     | app.ml.training              | epoch 11/20  loss=0.2730  val_acc=1.000  val_f1=1.000  auc=1.000  (23.7s)
+2026-10-28 12:40:39,200 | INFO     | app.ml.training              | epoch 12/20  loss=0.2703  val_acc=1.000  val_f1=1.000  auc=1.000  (23.2s)
+2026-10-28 12:41:02,564 | INFO     | app.ml.training              | epoch 13/20  loss=0.2659  val_acc=1.000  val_f1=1.000  auc=1.000  (23.4s)
+2026-10-28 12:41:31,561 | INFO     | app.ml.training              | epoch 14/20  loss=0.2651  val_acc=1.000  val_f1=1.000  auc=1.000  (29.0s)
+2026-10-28 12:42:01,859 | INFO     | app.ml.training              | epoch 15/20  loss=0.2693  val_acc=1.000  val_f1=1.000  auc=1.000  (30.3s)
+2026-10-28 12:42:25,714 | INFO     | app.ml.training              | epoch 16/20  loss=0.2692  val_acc=1.000  val_f1=1.000  auc=1.000  (23.9s)
+2026-10-28 12:42:50,593 | INFO     | app.ml.training              | epoch 17/20  loss=0.2713  val_acc=1.000  val_f1=1.000  auc=1.000  (24.9s)
+2026-10-28 12:43:15,245 | INFO     | app.ml.training              | epoch 18/20  loss=0.2678  val_acc=1.000  val_f1=1.000  auc=1.000  (24.7s)
+2026-10-28 12:43:43,346 | INFO     | app.ml.training              | epoch 19/20  loss=0.2697  val_acc=1.000  val_f1=1.000  auc=1.000  (28.1s)
+2026-10-28 12:44:09,322 | INFO     | app.ml.training              | epoch 20/20  loss=0.2688  val_acc=1.000  val_f1=1.000  auc=1.000  (26.0s)
+2026-10-28 12:44:09,354 | INFO     | train_xray                   | Best validation metrics: {'accuracy': 1.0, 'f1_0': 1.0, 'f1_1': 1.0, 'f1_2': 1.0, 'f1_3': 1.0, 'f1_4': 1.0, 'f1_5': 1.0, 'f1_macro': 1.0, 'auc': 1.0, 'loss': 0.0303, 'best_epoch': 18.0}
+2026-10-28 12:44:09,431 | INFO     | app.ml.training              | Checkpoint written to D:\minimaxc\meddiag\models\xray_model.pt
+===== XRAY rc=0 in 9.0 min =====
