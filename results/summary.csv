@@ -1,0 +1,15 @@
+dataset,modality,model,model_source,partition,n_samples,n_groups,accuracy,macro_precision,macro_recall,macro_f1,weighted_f1,macro_auc,mean_latency_ms,p95_latency_ms
+synthetic-ecg,ecg,trained (synthetic corpus),trained,synthetic-holdout,200,200,1.000000,1.000000,1.000000,1.000000,1.000000,1.000000,27.685,30.216
+synthetic-ecg,ecg,trained (real benchmark),trained,synthetic-holdout,200,200,0.210000,0.245455,0.210000,0.093122,0.093122,0.731406,26.479,29.089
+synthetic-ecg,ecg,heuristic baseline,heuristic_baseline,synthetic-holdout,200,200,0.980000,0.981818,0.980000,0.979950,0.979950,1.000000,4.568,5.712
+synthetic-eeg,eeg,trained (synthetic corpus),trained,synthetic-holdout,160,160,1.000000,1.000000,1.000000,1.000000,1.000000,1.000000,4.846,5.614
+synthetic-eeg,eeg,trained (real benchmark),trained,synthetic-holdout,160,160,0.500000,0.333333,0.500000,0.375000,0.375000,0.817552,5.125,6.279
+synthetic-eeg,eeg,heuristic baseline,heuristic_baseline,synthetic-holdout,160,160,0.893750,0.925439,0.893750,0.896499,0.896499,1.000000,2.758,3.900
+synthetic-xray,xray,trained (synthetic corpus),trained,synthetic-holdout,240,240,1.000000,1.000000,1.000000,1.000000,1.000000,1.000000,26.472,32.330
+synthetic-xray,xray,heuristic baseline,heuristic_baseline,synthetic-holdout,240,240,0.662500,0.765510,0.662500,0.634789,0.634789,0.919812,8.186,10.895
+mit-bih,ecg,trained (synthetic corpus),trained,test,145,6,0.331034,0.580532,0.297778,0.348556,0.383176,0.607915,42.827,65.291
+mit-bih,ecg,trained (real benchmark),trained,test,145,6,0.593103,0.611821,0.602222,0.576961,0.611847,0.728908,36.092,50.861
+mit-bih,ecg,heuristic baseline,heuristic_baseline,test,145,6,0.082759,0.404762,0.066667,0.112814,0.140045,0.502026,5.317,8.517
+bonn,eeg,trained (synthetic corpus),trained,test,80,4,0.437500,0.770833,0.437500,0.479128,0.479128,0.825000,7.456,8.872
+bonn,eeg,trained (real benchmark),trained,test,80,4,0.887500,0.908163,0.887500,0.886058,0.886058,0.955937,8.035,9.822
+bonn,eeg,heuristic baseline,heuristic_baseline,test,80,4,0.025000,0.500000,0.025000,0.047619,0.047619,0.500000,7.557,16.706

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedDiag &middot; Clinical Decision Support Dashboard</title>
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" width="26" height="26"><path d="M3 17h5l2-7 3 13 3-9 2 4h11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+    <div>
+      <h1>MedDiag</h1>
+      <p>AI-Based Medical Diagnosis Assistant &middot; ECG / EEG / Chest X-ray</p>
+    </div>
+  </div>
+  <div class="status-cluster">
+    <div id="model-chips" class="chips"></div>
+    <div id="health-pill" class="pill pill-muted">connecting&hellip;</div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab is-active" data-panel="ecg" role="tab">ECG &middot; Cardiovascular</button>
+  <button class="tab" data-panel="eeg" role="tab">EEG &middot; Neurological</button>
+  <button class="tab" data-panel="xray" role="tab">X-ray &middot; Pulmonary</button>
+  <button class="tab" data-panel="history" role="tab">Case history</button>
+  <!-- <button class="tab" data-panel="reports" role="tab">Reports</button> -->
+  <button class="tab" data-panel="about" role="tab">About</button>
+</nav>
+
+<main>
+
+<!-- ============================= ECG ============================= -->
+<section class="panel is-active" id="panel-ecg">
+  <div class="grid-2">
+    <div class="card">
+      <h2>ECG input</h2>
+      <p class="hint">Paste samples, upload a CSV/JSON file, or load a synthetic sample to try the pipeline.</p>
+
+      <div class="field-row">
+        <label class="field">
+          <span>Patient reference</span>
+          <input type="text" id="ecg-patient" value="PT-0001" placeholder="de-identified reference">
+        </label>
+        <label class="field field-sm">
+          <span>Sampling rate (Hz)</span>
+          <input type="number" id="ecg-rate" value="500" min="1" step="1">
+        </label>
+        <label class="field field-sm">
+          <span>Age</span>
+          <input type="number" id="ecg-age" placeholder="58" min="0" max="130">
+        </label>
+        <label class="field field-sm">
+          <span>Sex</span>
+          <select id="ecg-sex">
+            <option value="unknown">Unknown</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Clinical notes (optional)</span>
+        <input type="text" id="ecg-notes" placeholder="Palpitations since last night">
+      </label>
+
+      <label class="field">
+        <span>Raw samples (comma or whitespace separated)</span>
+        <textarea id="ecg-samples" rows="5" spellcheck="false" placeholder="0.02, 0.03, 0.05 ..."></textarea>
+      </label>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="ecg-analyze">Analyse ECG</button>
+        <button class="btn" id="ecg-demo">Load demo sample</button>
+        <label class="btn btn-ghost">Upload file<input type="file" id="ecg-file" accept=".csv,.json,.txt,.mat" hidden></label>
+        <button class="btn btn-ghost" id="ecg-clear">Clear</button>
+      </div>
+      <p class="status-line" id="ecg-status"></p>
+    </div>
+
+    <div class="card" id="ecg-result">
+      <div class="empty-state" id="ecg-empty">
+        <h3>No analysis yet</h3>
+        <p>Submit an ECG to see the diagnosis, clinical findings and explainable-AI output.</p>
+      </div>
+      <div id="ecg-output" hidden></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= EEG ============================= -->
+<section class="panel" id="panel-eeg">
+  <div class="grid-2">
+    <div class="card">
+      <h2>EEG input</h2>
+      <p class="hint">Paste samples, upload a CSV/JSON file, or load a synthetic sample to try the pipeline.</p>
+
+      <div class="field-row">
+        <label class="field">
+          <span>Patient reference</span>
+          <input type="text" id="eeg-patient" value="PT-0002" placeholder="de-identified reference">
+        </label>
+        <label class="field field-sm">
+          <span>Sampling rate (Hz)</span>
+          <input type="number" id="eeg-rate" value="256" min="1" step="1">
+        </label>
+        <label class="field field-sm">
+          <span>Age</span>
+          <input type="number" id="eeg-age" placeholder="41" min="0" max="130">
+        </label>
+        <label class="field field-sm">
+          <span>Sex</span>
+          <select id="eeg-sex">
+            <option value="unknown">Unknown</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Clinical notes (optional)</span>
+        <input type="text" id="eeg-notes" placeholder="Two unprovoked seizures last month">
+      </label>
+
+      <label class="field">
+        <span>Raw samples (comma or whitespace separated)</span>
+        <textarea id="eeg-samples" rows="5" spellcheck="false" placeholder="12.4, 15.1, 9.8 ..."></textarea>
+      </label>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="eeg-analyze">Analyse EEG</button>
+        <button class="btn" id="eeg-demo">Load demo sample</button>
+        <label class="btn btn-ghost">Upload file<input type="file" id="eeg-file" accept=".csv,.json,.txt,.mat" hidden></label>
+        <button class="btn btn-ghost" id="eeg-clear">Clear</button>
+      </div>
+      <p class="status-line" id="eeg-status"></p>
+    </div>
+
+    <div class="card" id="eeg-result">
+      <div class="empty-state" id="eeg-empty">
+        <h3>No analysis yet</h3>
+        <p>Submit an EEG to see the neurological screening result, spectral findings and explainable-AI output.</p>
+      </div>
+      <div id="eeg-output" hidden></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= X-ray ============================= -->
+<section class="panel" id="panel-xray">
+  <div class="grid-2">
+    <div class="card">
+      <h2>Chest radiograph input</h2>
+      <p class="hint">Upload a PNG, JPEG or DICOM chest X-ray, or load a synthetic radiograph.</p>
+
+      <div class="field-row">
+        <label class="field">
+          <span>Patient reference</span>
+          <input type="text" id="xray-patient" value="PT-0003" placeholder="de-identified reference">
+        </label>
+        <label class="field field-sm">
+          <span>Age</span>
+          <input type="number" id="xray-age" placeholder="63" min="0" max="130">
+        </label>
+        <label class="field field-sm">
+          <span>Sex</span>
+          <select id="xray-sex">
+            <option value="unknown">Unknown</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label class="field field-sm">
+          <span>View</span>
+          <select id="xray-view">
+            <option value="PA">PA</option>
+            <option value="AP">AP</option>
+            <option value="LATERAL">Lateral</option>
+            <option value="UNKNOWN">Unknown</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Clinical notes (optional)</span>
+        <input type="text" id="xray-notes" placeholder="Productive cough, fever for five days">
+      </label>
+
+      <div class="dropzone" id="xray-drop">
+        <input type="file" id="xray-file" accept="image/png,image/jpeg,image/jpg,.dcm" hidden>
+        <p><strong>Drop a radiograph here</strong></p>
+        <p class="hint">or click to browse &middot; PNG / JPEG / DICOM &middot; max 25 MB</p>
+        <img id="xray-preview" alt="Radiograph preview" hidden>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="xray-analyze">Analyse radiograph</button>
+        <button class="btn" id="xray-demo">Load demo sample</button>
+        <button class="btn btn-ghost" id="xray-clear">Clear</button>
+      </div>
+      <p class="status-line" id="xray-status"></p>
+    </div>
+
+    <div class="card" id="xray-result">
+      <div class="empty-state" id="xray-empty">
+        <h3>No analysis yet</h3>
+        <p>Upload a chest radiograph to see the diagnostic impression and Grad-CAM localisation.</p>
+      </div>
+      <div id="xray-output" hidden></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= History ============================= -->
+<section class="panel" id="panel-history">
+  <div class="card">
+    <div class="card-head">
+      <h2>Case history</h2>
+      <div class="btn-row">
+        <button class="btn btn-ghost" id="history-refresh">Refresh</button>
+      </div>
+    </div>
+    <div id="history-stats" class="stat-row"></div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>Analysis ID</th><th>Modality</th><th>Patient</th><th>Prediction</th><th>Confidence</th><th>Severity</th><th>Created</th><th></th></tr>
+        </thead>
+        <tbody id="history-body"><tr><td colspan="8" class="muted">No cases recorded yet.</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= Reports ============================= -->
+<!-- <section class="panel" id="panel-reports">
+  <div class="card">
+    <div class="card-head">
+      <h2>Generated reports</h2>
+      <div class="btn-row"><button class="btn btn-ghost" id="reports-refresh">Refresh</button></div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Report ID</th><th>Analysis</th><th>Format</th><th>Size</th><th>Created</th><th></th></tr></thead>
+        <tbody id="reports-body"><tr><td colspan="6" class="muted">No reports generated yet.</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section> -->
+
+<!-- ============================= About ============================= -->
+<section class="panel" id="panel-about">
+  <div class="grid-2">
+    <div class="card">
+      <h2>System overview</h2>
+      <p class="hint">MedDiag is a Python/FastAPI clinical decision-support backend that analyses ECG, EEG and chest radiographs, explains its reasoning and produces automated diagnostic reports.</p>
+      <div id="about-models" class="model-grid"></div>
+    </div>
+    <div class="card">
+      <h2>API reference</h2>
+      <!-- <ul class="api-list">
+        <li><code>POST /api/v1/ecg/analyze</code><span>Raw ECG samples &rarr; diagnosis</span></li>
+        <li><code>POST /api/v1/ecg/analyze/upload</code><span>ECG file upload &rarr; diagnosis</span></li>
+        <li><code>POST /api/v1/eeg/analyze</code><span>Raw EEG samples &rarr; diagnosis</span></li>
+        <li><code>POST /api/v1/eeg/analyze/upload</code><span>EEG file upload &rarr; diagnosis</span></li>
+        <li><code>POST /api/v1/xray/analyze</code><span>Radiograph upload &rarr; diagnosis</span></li>
+        <li><code>POST /api/v1/reports/{analysis_id}</code><span>Generate PDF / HTML / JSON report</span></li>
+        <li><code>GET  /api/v1/history</code><span>Case history</span></li>
+        <li><code>GET  /api/v1/models</code><span>Model registry metadata</span></li>
+        <li><code>GET  /api/v1/health</code><span>Service health</span></li>
+      </ul> -->
+      <p class="hint">Interactive OpenAPI documentation lives at <a href="/docs" target="_blank" rel="noopener">/docs</a>.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="toast-stack" id="toasts"></div>
+
+<footer class="footer">
+  <p><strong>Decision support only.</strong> Outputs are not a medical diagnosis and require review by a qualified healthcare professional.</p>
+</footer>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

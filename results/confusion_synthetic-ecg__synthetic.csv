@@ -1,0 +1,6 @@
+true\predicted,NORM,AFIB,MI,STDE,PVC
+NORM,40,0,0,0,0
+AFIB,0,40,0,0,0
+MI,0,0,40,0,0
+STDE,0,0,0,40,0
+PVC,0,0,0,0,40

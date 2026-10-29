@@ -1,0 +1,1170 @@
+[
+  {
+    "dataset": "synthetic-ecg",
+    "modality": "ecg",
+    "n_samples": 200,
+    "n_groups": 200,
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "macro_auc": 1.0,
+    "mean_latency_ms": 27.685302500613034,
+    "p95_latency_ms": 30.21610499999951,
+    "per_class": {
+      "NORM": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "AFIB": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "MI": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "STDE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "PVC": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      }
+    },
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    ],
+    "model": "synthetic",
+    "model_label": "trained (synthetic corpus)",
+    "model_description": "shipped synthetic-data checkpoint",
+    "model_source": "trained",
+    "partition": "synthetic-holdout"
+  },
+  {
+    "dataset": "synthetic-ecg",
+    "modality": "ecg",
+    "n_samples": 200,
+    "n_groups": 200,
+    "accuracy": 0.21,
+    "macro_precision": 0.24545454545454545,
+    "macro_recall": 0.21000000000000002,
+    "macro_f1": 0.09312169312169312,
+    "weighted_f1": 0.09312169312169312,
+    "macro_auc": 0.7314062499999999,
+    "mean_latency_ms": 26.47868299856782,
+    "p95_latency_ms": 29.089259958709572,
+    "per_class": {
+      "NORM": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 40
+      },
+      "AFIB": {
+        "precision": 0.22727272727272727,
+        "recall": 1.0,
+        "f1": 0.37037037037037035,
+        "support": 40
+      },
+      "MI": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 40
+      },
+      "STDE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 40
+      },
+      "PVC": {
+        "precision": 1.0,
+        "recall": 0.05,
+        "f1": 0.09523809523809523,
+        "support": 40
+      }
+    },
+    "confusion": [
+      [
+        0,
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        37,
+        0,
+        0,
+        0
+      ],
+      [
+        19,
+        21,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        38,
+        0,
+        0,
+        2
+      ]
+    ],
+    "model": "real",
+    "model_label": "trained (real benchmark)",
+    "model_description": "checkpoint trained on MIT-BIH",
+    "model_source": "trained",
+    "partition": "synthetic-holdout"
+  },
+  {
+    "dataset": "synthetic-ecg",
+    "modality": "ecg",
+    "n_samples": 200,
+    "n_groups": 200,
+    "accuracy": 0.98,
+    "macro_precision": 0.9818181818181818,
+    "macro_recall": 0.9800000000000001,
+    "macro_f1": 0.9799498746867169,
+    "weighted_f1": 0.9799498746867168,
+    "macro_auc": 1.0,
+    "mean_latency_ms": 4.568324000865687,
+    "p95_latency_ms": 5.712470010621473,
+    "per_class": {
+      "NORM": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1": 0.9523809523809523,
+        "support": 40
+      },
+      "AFIB": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "MI": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "support": 40
+      },
+      "STDE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "PVC": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      }
+    },
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    ],
+    "model": "heuristic",
+    "model_label": "heuristic baseline",
+    "model_description": "deterministic clinical-rule scorer",
+    "model_source": "heuristic_baseline",
+    "partition": "synthetic-holdout"
+  },
+  {
+    "dataset": "synthetic-eeg",
+    "modality": "eeg",
+    "n_samples": 160,
+    "n_groups": 160,
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "macro_auc": 1.0,
+    "mean_latency_ms": 4.845908749121008,
+    "p95_latency_ms": 5.6137500039767465,
+    "per_class": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "EPILEPSY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "PARKINSON": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "DEPRESSION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      }
+    },
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        40
+      ]
+    ],
+    "model": "synthetic",
+    "model_label": "trained (synthetic corpus)",
+    "model_description": "shipped synthetic-data checkpoint",
+    "model_source": "trained",
+    "partition": "synthetic-holdout"
+  },
+  {
+    "dataset": "synthetic-eeg",
+    "modality": "eeg",
+    "n_samples": 160,
+    "n_groups": 160,
+    "accuracy": 0.5,
+    "macro_precision": 0.3333333333333333,
+    "macro_recall": 0.5,
+    "macro_f1": 0.375,
+    "weighted_f1": 0.375,
+    "macro_auc": 0.8175520833333334,
+    "mean_latency_ms": 5.125282500375761,
+    "p95_latency_ms": 6.278689965256487,
+    "per_class": {
+      "NORMAL": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "support": 40
+      },
+      "EPILEPSY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "PARKINSON": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 40
+      },
+      "DEPRESSION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 40
+      }
+    },
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        40,
+        0,
+        0,
+        0
+      ]
+    ],
+    "model": "real",
+    "model_label": "trained (real benchmark)",
+    "model_description": "checkpoint trained on Bonn",
+    "model_source": "trained",
+    "partition": "synthetic-holdout"
+  },
+  {
+    "dataset": "synthetic-eeg",
+    "modality": "eeg",
+    "n_samples": 160,
+    "n_groups": 160,
+    "accuracy": 0.89375,
+    "macro_precision": 0.9254385964912281,
+    "macro_recall": 0.89375,
+    "macro_f1": 0.8964992709178492,
+    "weighted_f1": 0.8964992709178491,
+    "macro_auc": 1.0,
+    "mean_latency_ms": 2.7576856282394147,
+    "p95_latency_ms": 3.8999299838906114,
+    "per_class": {
+      "NORMAL": {
+        "precision": 0.7017543859649122,
+        "recall": 1.0,
+        "f1": 0.8247422680412371,
+        "support": 40
+      },
+      "EPILEPSY": {
+        "precision": 1.0,
+        "recall": 0.725,
+        "f1": 0.8405797101449275,
+        "support": 40
+      },
+      "PARKINSON": {
+        "precision": 1.0,
+        "recall": 0.975,
+        "f1": 0.9873417721518987,
+        "support": 40
+      },
+      "DEPRESSION": {
+        "precision": 1.0,
+        "recall": 0.875,
+        "f1": 0.9333333333333333,
+        "support": 40
+      }
+    },
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        29,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        39,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        35
+      ]
+    ],
+    "model": "heuristic",
+    "model_label": "heuristic baseline",
+    "model_description": "deterministic clinical-rule scorer",
+    "model_source": "heuristic_baseline",
+    "partition": "synthetic-holdout"
+  },
+  {
+    "dataset": "synthetic-xray",
+    "modality": "xray",
+    "n_samples": 240,
+    "n_groups": 240,
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "macro_auc": 1.0,
+    "mean_latency_ms": 26.4717224999913,
+    "p95_latency_ms": 32.32951500103809,
+    "per_class": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "PNEUMONIA": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "CONSOLIDATION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "EFFUSION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "TUBERCULOSIS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "COVID19": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      }
+    },
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        40,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    ],
+    "model": "synthetic",
+    "model_label": "trained (synthetic corpus)",
+    "model_description": "shipped synthetic-data checkpoint",
+    "model_source": "trained",
+    "partition": "synthetic-holdout"
+  },
+  {
+    "dataset": "synthetic-xray",
+    "modality": "xray",
+    "n_samples": 240,
+    "n_groups": 240,
+    "accuracy": 0.6625,
+    "macro_precision": 0.7655098524663742,
+    "macro_recall": 0.6625,
+    "macro_f1": 0.6347886429840557,
+    "weighted_f1": 0.6347886429840557,
+    "macro_auc": 0.9198124999999999,
+    "mean_latency_ms": 8.185806252731709,
+    "p95_latency_ms": 10.894914984237401,
+    "per_class": {
+      "NORMAL": {
+        "precision": 0.5194805194805194,
+        "recall": 1.0,
+        "f1": 0.6837606837606837,
+        "support": 40
+      },
+      "PNEUMONIA": {
+        "precision": 0.30434782608695654,
+        "recall": 0.35,
+        "f1": 0.3255813953488372,
+        "support": 40
+      },
+      "CONSOLIDATION": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.33333333333333337,
+        "support": 40
+      },
+      "EFFUSION": {
+        "precision": 1.0,
+        "recall": 0.425,
+        "f1": 0.5964912280701754,
+        "support": 40
+      },
+      "TUBERCULOSIS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 40
+      },
+      "COVID19": {
+        "precision": 0.7692307692307693,
+        "recall": 1.0,
+        "f1": 0.8695652173913044,
+        "support": 40
+      }
+    },
+    "confusion": [
+      [
+        40,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        26,
+        14,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        32,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        0,
+        0,
+        17,
+        0,
+        12
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    ],
+    "model": "heuristic",
+    "model_label": "heuristic baseline",
+    "model_description": "deterministic clinical-rule scorer",
+    "model_source": "heuristic_baseline",
+    "partition": "synthetic-holdout"
+  },
+  {
+    "dataset": "mit-bih",
+    "modality": "ecg",
+    "n_samples": 145,
+    "n_groups": 6,
+    "accuracy": 0.3310344827586207,
+    "macro_precision": 0.5805322128851541,
+    "macro_recall": 0.2977777777777778,
+    "macro_f1": 0.34855586289661633,
+    "weighted_f1": 0.38317633201312934,
+    "macro_auc": 0.6079150326797386,
+    "mean_latency_ms": 42.82715448684156,
+    "p95_latency_ms": 65.29129998525599,
+    "per_class": {
+      "NORM": {
+        "precision": 1.0,
+        "recall": 0.21666666666666667,
+        "f1": 0.3561643835616438,
+        "support": 60
+      },
+      "AFIB": {
+        "precision": 0.45588235294117646,
+        "recall": 0.5166666666666667,
+        "f1": 0.484375,
+        "support": 60
+      },
+      "MI": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "STDE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "PVC": {
+        "precision": 0.2857142857142857,
+        "recall": 0.16,
+        "f1": 0.20512820512820512,
+        "support": 25
+      }
+    },
+    "confusion": [
+      [
+        13,
+        20,
+        27,
+        0,
+        0
+      ],
+      [
+        0,
+        31,
+        19,
+        0,
+        10
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        17,
+        4,
+        0,
+        4
+      ]
+    ],
+    "model": "synthetic",
+    "model_label": "trained (synthetic corpus)",
+    "model_description": "shipped synthetic-data checkpoint",
+    "model_source": "trained",
+    "partition": "test"
+  },
+  {
+    "dataset": "mit-bih",
+    "modality": "ecg",
+    "n_samples": 145,
+    "n_groups": 6,
+    "accuracy": 0.593103448275862,
+    "macro_precision": 0.6118210912399774,
+    "macro_recall": 0.6022222222222222,
+    "macro_f1": 0.576960569683432,
+    "weighted_f1": 0.6118466717785009,
+    "macro_auc": 0.7289084967320262,
+    "mean_latency_ms": 36.09163448342989,
+    "p95_latency_ms": 50.8605999755673,
+    "per_class": {
+      "NORM": {
+        "precision": 0.8648648648648649,
+        "recall": 0.5333333333333333,
+        "f1": 0.6597938144329898,
+        "support": 60
+      },
+      "AFIB": {
+        "precision": 0.6440677966101694,
+        "recall": 0.6333333333333333,
+        "f1": 0.6386554621848739,
+        "support": 60
+      },
+      "MI": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "STDE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "PVC": {
+        "precision": 0.32653061224489793,
+        "recall": 0.64,
+        "f1": 0.43243243243243235,
+        "support": 25
+      }
+    },
+    "confusion": [
+      [
+        32,
+        16,
+        0,
+        0,
+        12
+      ],
+      [
+        1,
+        38,
+        0,
+        0,
+        21
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        5,
+        0,
+        0,
+        16
+      ]
+    ],
+    "model": "real",
+    "model_label": "trained (real benchmark)",
+    "model_description": "checkpoint trained on MIT-BIH",
+    "model_source": "trained",
+    "partition": "test"
+  },
+  {
+    "dataset": "mit-bih",
+    "modality": "ecg",
+    "n_samples": 145,
+    "n_groups": 6,
+    "accuracy": 0.08275862068965517,
+    "macro_precision": 0.4047619047619048,
+    "macro_recall": 0.06666666666666667,
+    "macro_f1": 0.11281430684415757,
+    "weighted_f1": 0.1400453464272301,
+    "macro_auc": 0.5020261437908496,
+    "mean_latency_ms": 5.317432416908058,
+    "p95_latency_ms": 8.517100010067216,
+    "per_class": {
+      "NORM": {
+        "precision": 0.5,
+        "recall": 0.11666666666666667,
+        "f1": 0.18918918918918917,
+        "support": 60
+      },
+      "AFIB": {
+        "precision": 0.7142857142857143,
+        "recall": 0.08333333333333333,
+        "f1": 0.14925373134328357,
+        "support": 60
+      },
+      "MI": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "STDE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "PVC": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 25
+      }
+    },
+    "confusion": [
+      [
+        7,
+        0,
+        53,
+        0,
+        0
+      ],
+      [
+        6,
+        5,
+        41,
+        6,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        22,
+        0,
+        0
+      ]
+    ],
+    "model": "heuristic",
+    "model_label": "heuristic baseline",
+    "model_description": "deterministic clinical-rule scorer",
+    "model_source": "heuristic_baseline",
+    "partition": "test"
+  },
+  {
+    "dataset": "bonn",
+    "modality": "eeg",
+    "n_samples": 80,
+    "n_groups": 4,
+    "accuracy": 0.4375,
+    "macro_precision": 0.7708333333333333,
+    "macro_recall": 0.4375,
+    "macro_f1": 0.4791280148423005,
+    "weighted_f1": 0.4791280148423005,
+    "macro_auc": 0.825,
+    "mean_latency_ms": 7.455532504536677,
+    "p95_latency_ms": 8.871579993865451,
+    "per_class": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 0.225,
+        "f1": 0.36734693877551017,
+        "support": 40
+      },
+      "EPILEPSY": {
+        "precision": 0.5416666666666666,
+        "recall": 0.65,
+        "f1": 0.5909090909090908,
+        "support": 40
+      },
+      "PARKINSON": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "DEPRESSION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion": [
+      [
+        9,
+        22,
+        6,
+        3
+      ],
+      [
+        0,
+        26,
+        14,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "model": "synthetic",
+    "model_label": "trained (synthetic corpus)",
+    "model_description": "shipped synthetic-data checkpoint",
+    "model_source": "trained",
+    "partition": "test"
+  },
+  {
+    "dataset": "bonn",
+    "modality": "eeg",
+    "n_samples": 80,
+    "n_groups": 4,
+    "accuracy": 0.8875,
+    "macro_precision": 0.9081632653061225,
+    "macro_recall": 0.8875,
+    "macro_f1": 0.8860579205570502,
+    "weighted_f1": 0.8860579205570502,
+    "macro_auc": 0.9559375,
+    "mean_latency_ms": 8.034716250404017,
+    "p95_latency_ms": 9.821964980801567,
+    "per_class": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 0.775,
+        "f1": 0.8732394366197184,
+        "support": 40
+      },
+      "EPILEPSY": {
+        "precision": 0.8163265306122449,
+        "recall": 1.0,
+        "f1": 0.898876404494382,
+        "support": 40
+      },
+      "PARKINSON": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "DEPRESSION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion": [
+      [
+        31,
+        9,
+        0,
+        0
+      ],
+      [
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "model": "real",
+    "model_label": "trained (real benchmark)",
+    "model_description": "checkpoint trained on Bonn",
+    "model_source": "trained",
+    "partition": "test"
+  },
+  {
+    "dataset": "bonn",
+    "modality": "eeg",
+    "n_samples": 80,
+    "n_groups": 4,
+    "accuracy": 0.025,
+    "macro_precision": 0.5,
+    "macro_recall": 0.025,
+    "macro_f1": 0.047619047619047616,
+    "weighted_f1": 0.047619047619047616,
+    "macro_auc": 0.5,
+    "mean_latency_ms": 7.557288750831503,
+    "p95_latency_ms": 16.705794990411952,
+    "per_class": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 0.05,
+        "f1": 0.09523809523809523,
+        "support": 40
+      },
+      "EPILEPSY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 40
+      },
+      "PARKINSON": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "DEPRESSION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion": [
+      [
+        2,
+        0,
+        10,
+        28
+      ],
+      [
+        0,
+        0,
+        11,
+        29
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "model": "heuristic",
+    "model_label": "heuristic baseline",
+    "model_description": "deterministic clinical-rule scorer",
+    "model_source": "heuristic_baseline",
+    "partition": "test"
+  }
+]
